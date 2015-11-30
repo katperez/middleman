@@ -75,7 +75,6 @@ module Middleman
         raise "Setting #{key} doesn't exist" if @finalized
         raise "Setting #{key} already defined" if @settings.key?(key)
         raise 'Setting key must be a Symbol' unless key.is_a? Symbol
-
         @settings[key] = ConfigSetting.new(key, default, description, options)
       end
 
